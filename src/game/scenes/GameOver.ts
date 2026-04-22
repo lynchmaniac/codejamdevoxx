@@ -7,19 +7,23 @@ export class GameOver extends Scene {
     create() {
         this.cameras.main.setBackgroundColor(0x1a0000);
 
-        this.add.text(512, 220, 'GAME OVER', {
-            fontFamily: 'Arial Black', fontSize: 72, color: '#FF2244',
-            stroke: '#000000', strokeThickness: 8, align: 'center'
+        this.add.text(640, 200, 'GAME OVER', {
+            fontFamily: 'Arial Black', fontSize: 80, color: '#FF2244',
+            stroke: '#000000', strokeThickness: 10, align: 'center'
         }).setOrigin(0.5);
 
-        this.add.text(512, 340, "She'll be back!", {
-            fontFamily: 'Arial', fontSize: 30, color: '#ffaaaa',
+        this.add.text(640, 330, "The ninjas got her this time...", {
+            fontFamily: 'Arial', fontSize: 28, color: '#ffaaaa',
             align: 'center'
         }).setOrigin(0.5);
 
-        this.add.text(512, 500, 'Press SPACE to try again\nPress M for main menu', {
-            fontFamily: 'Arial', fontSize: 22, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 3, align: 'center'
+        this.add.text(640, 490, 'Press SPACE to try again', {
+            fontFamily: 'Arial Black', fontSize: 26, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 4
+        }).setOrigin(0.5);
+
+        this.add.text(640, 540, 'Press M for main menu', {
+            fontFamily: 'Arial', fontSize: 20, color: '#aaaaaa',
         }).setOrigin(0.5);
 
         this.input.keyboard!.once('keydown-SPACE', () => this.scene.start('Game', { level: 1 }));
